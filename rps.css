@@ -1,0 +1,42 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(150, 150, 150, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.overlay-content {
+  background-color: #f44336;
+  padding: 40px 60px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.overlay-content h1 {
+  margin: 0 0 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+}
+
+#startBtn {
+  background-color: white;
+  color: red;
+  border: 3px solid red;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px 30px;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  background-color: #ffebee;
+  transform: scale(1.05);
+}
