@@ -12,7 +12,8 @@
 }
 
 .overlay-content {
-  background-color: #f44336;
+  color: white;
+  background-color: #4d153e;
   padding: 40px 60px;
   text-align: center;
   border-radius: 8px;
@@ -24,14 +25,14 @@
   margin: 0 0 30px;
   font-size: 2rem;
   font-weight: bold;
-  color: black;
+  color: white;
 }
 
 #startBtn {
   background-color: white;
   border-radius: 14px;
-  color: red;
-  border: 3px solid red;
+  color: rgb(31, 35, 68);
+  border: 3px solid rgb(14, 15, 73);
   font-size: 1.5rem;
   font-weight: bold;
   padding: 15px 30px;
@@ -49,16 +50,13 @@ body {
   background-color: #1e293b;
   color: white;
   font-family: "Segoe UI", sans-serif;
-
-  align-items: center;
   min-height: 100vh;
 }
 
 .main-title {
-  padding: 50px;
-  margin: 0 auto;
+  margin: 0;
+  padding: 40px;
   background-color: #2a0c22;
-
   font-size: 3.3rem;
   color: yellow;
   cursor: pointer;
