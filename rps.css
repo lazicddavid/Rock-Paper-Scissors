@@ -46,7 +46,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1e293b; /* tamna pozadina */
+  background-color: #1e293b;
   color: white;
   font-family: "Segoe UI", sans-serif;
   display: flex;
@@ -86,14 +86,15 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
 }
 
 .weapon {
   background-color: #334155;
   border: none;
+
   border-radius: 12px;
-  font-size: 2.5rem;
+  font-size: 5rem;
   padding: 20px;
   cursor: pointer;
   transition: transform 0.2s, background-color 0.2s;
