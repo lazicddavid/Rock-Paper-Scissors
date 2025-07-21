@@ -44,5 +44,62 @@
 }
 
 body {
-  background-color: #2a0c25;
+  margin: 0;
+  padding: 0;
+  background-color: #1e293b; /* tamna pozadina */
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.game-container {
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #cbd5e1;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.choice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.weapon {
+  background-color: #334155;
+  border: none;
+  border-radius: 12px;
+  font-size: 2.5rem;
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.weapon:hover {
+  background-color: #475569;
+  transform: scale(1.1);
 }
