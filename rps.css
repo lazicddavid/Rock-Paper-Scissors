@@ -55,6 +55,10 @@ body {
 }
 
 .main-title {
+  padding: 50px;
+  margin: 0 auto;
+  background-color: #2a0c22;
+
   font-size: 3.3rem;
   color: yellow;
   cursor: pointer;
@@ -88,7 +92,7 @@ h2 {
 .scoreboard {
   display: flex;
   justify-content: center;
-  gap: 150px;
+  gap: 250px;
 
   margin-bottom: 40px;
 }
@@ -100,7 +104,7 @@ h2 {
 }
 
 .icon {
-  font-size: 6rem;
+  font-size: 7rem;
   margin-bottom: 10px;
 }
 
@@ -108,6 +112,11 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 50px;
+}
+
+.player {
+  font-size: x-large;
+  font-weight: 300;
 }
 
 .weapon {
