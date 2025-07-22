@@ -21,3 +21,4 @@ padding;
 
 color;
 border;
+const
