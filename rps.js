@@ -14,3 +14,5 @@ let computerChoice;
 //nakon sto igra igrac:
 
 let computerScore;
+
+margin;
