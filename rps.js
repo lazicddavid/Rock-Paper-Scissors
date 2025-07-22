@@ -16,3 +16,5 @@ let computerChoice;
 let computerScore;
 
 margin;
+
+padding;
