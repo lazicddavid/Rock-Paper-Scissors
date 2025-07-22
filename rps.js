@@ -22,3 +22,4 @@ padding;
 color;
 border;
 const
+let
