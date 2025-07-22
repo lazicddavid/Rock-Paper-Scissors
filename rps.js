@@ -20,3 +20,4 @@ margin;
 padding;
 
 color;
+border;
