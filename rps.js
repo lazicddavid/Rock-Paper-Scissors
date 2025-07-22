@@ -18,3 +18,5 @@ let computerScore;
 margin;
 
 padding;
+
+color;
