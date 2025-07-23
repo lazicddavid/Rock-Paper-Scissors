@@ -13,10 +13,13 @@ let computerChoice;
 //napravi array choices ["rock","paper", "scissors"]
 //nakon sto igra igrac:
 
-
 function proveriBroj(broj) {
-  if(broj < 10 ) 
-    console.log ("Broje je veliki")
-} else {
-  console.log("Mali broj")
-};
+  if (broj > 10) {
+    console.log("Broj je veliki");
+  } else {
+    console.log("Broj je mali");
+  }
+}
+
+proveriBroj(122); // Ispisaće: Broj je veliki
+proveriBroj(5); // Ispisaće: Broj je mali
