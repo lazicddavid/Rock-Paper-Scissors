@@ -13,14 +13,9 @@ let computerChoice;
 //napravi array choices ["rock","paper", "scissors"]
 //nakon sto igra igrac:
 
-let computerScore;
+let nickname = "daki";
+function pozdrav() {
+  console.log(`Pozdrav, ${nickname}`);
+}
 
-margin;
-
-padding;
-
-color;
-border;
-const
-let
-addEventListener
+pozdrav();
