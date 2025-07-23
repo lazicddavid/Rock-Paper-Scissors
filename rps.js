@@ -13,9 +13,4 @@ let computerChoice;
 //napravi array choices ["rock","paper", "scissors"]
 //nakon sto igra igrac:
 
-let nickname = "David";
-function pozdrav() {
-  console.log(`Pozdrav, %{nickname}`);
-}
-
-nickname();
+`
