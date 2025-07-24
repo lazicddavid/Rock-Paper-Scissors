@@ -15,6 +15,8 @@ function computerChoice() {
   return options[radnomIndex];
 }
 
+console.log(`Kompjuter je igrao ${computerChoice}`);
+
 //kako da znam sta kompjuter igra?
 //napravi array choices ["rock","paper", "scissors"]
 //nakon sto igra igrac:
