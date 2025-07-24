@@ -11,10 +11,13 @@ let computerSign;
 const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
-  const radnomIndex = Math.floor(Math.random() * options.length);
-  return options[radnomIndex];
+  const randomIndex = Math.floor(Math.random() * options.length);
+  return options[randomIndex];
 }
-computerMove = getComputerChoice();
+
+// pozivamo funkciju i rezultat smeštamo u computerSign
+computerSign = getComputerChoice();
+
 console.log(`Kompjuter je igrao ${computerSign}`);
 
 //kako da znam sta kompjuter igra?
