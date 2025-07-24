@@ -10,11 +10,10 @@ let computerChoice;
 
 const options = ["rock", "paper", "scessior"];
 
- funciton computerChoice() {
+function computerChoice() {
   const radnomIndex = Math.floor(Math.random() * options.length);
   return options[radnomIndex];
-  
- }
+}
 
 //kako da znam sta kompjuter igra?
 //napravi array choices ["rock","paper", "scissors"]
