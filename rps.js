@@ -5,17 +5,17 @@ document.getElementById("startBtn").addEventListener("click", function () {
 let playerScore = 0;
 let computerScore = 0;
 
-let playerChoice;
-let computerChoice;
+//let playerChoice;
+//let computerChoice;
 
-const options = ["rock", "paper", "scessior"];
+const options = ["rock", "paper", "scissors"];
 
-function computerChoice() {
+function getComputerChoice() {
   const radnomIndex = Math.floor(Math.random() * options.length);
   return options[radnomIndex];
 }
 
-console.log(`Kompjuter je igrao ${computerChoice}`);
+console.log(`Kompjuter je igrao ${getComputerChoice}`);
 
 //kako da znam sta kompjuter igra?
 //napravi array choices ["rock","paper", "scissors"]
