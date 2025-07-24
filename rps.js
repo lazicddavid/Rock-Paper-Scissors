@@ -11,7 +11,8 @@ let computerChoice;
 const options = ["rock", "paper", "scessior"];
 
  funciton computerChoice() {
-  const radnomIndex = Math.floor(Math.random() * options.length)
+  const radnomIndex = Math.floor(Math.random() * options.length);
+  return options[radnomIndex];
   
  }
 
