@@ -6,7 +6,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 let playerChoice;
-let computerSign;
+let computerChoice;
 
 const options = ["rock", "paper", "scissors"];
 
@@ -15,15 +15,20 @@ function getComputerChoice() {
   return options[randomIndex];
 }
 
-// pozivamo funkciju i rezultat smeštamo u computerSign
 computerSign = getComputerChoice();
 
 console.log(`Kompjuter je igrao ${computerSign}`);
 
 //kako da znam sta kompjuter igra?
 //napravi array choices ["rock","paper", "scissors"]
-//nakon sto igra igrac:
 
-//kako da znam sta kompjuter igra?
-//napravi array choices ["rock","paper", "scissors"]
-//nakon sto igra igrac:
+////////// pravila za igru:
+
+//belezi se izbor playera
+//komp. generise nasumican izbor
+//uporedimo oba izbora
+//ako su isti, rez = neresen
+//ako igrac pobedjuje, dodaje ++ se jedan poen
+//ako komp. pobedjuje dodaje se ++ poen njemu
+//menja se rezultat i na ekranu(curent score)
+//ko prvi dodje do 5 poena, pobednik, igra se vraca na pocetak.
