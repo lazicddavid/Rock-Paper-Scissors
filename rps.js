@@ -5,7 +5,6 @@ document.getElementById("startBtn").addEventListener("click", function () {
 let playerScore = 0;
 let computerScore = 0;
 
-let playerChoice;
 let computerChoice;
 
 const options = ["rock", "paper", "scissors"];
@@ -18,6 +17,8 @@ function getComputerChoice() {
 computerSign = getComputerChoice();
 
 console.log(`Kompjuter je igrao ${computerSign}`);
+
+let playerChoice = "";
 
 ////////// pravila za igru:
 
