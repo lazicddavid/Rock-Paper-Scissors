@@ -20,7 +20,10 @@ console.log(`Kompjuter je igrao ${computerSign}`);
 
 let playerChoice = "";
 
-document.getElementById("rock").addEventListener("click", function())
+document.getElementById("rock").addEventListener("click", function () {
+  playerChoice = "rock";
+  console.log(Igrac je izabrao: playerChoice);
+});
 
 ////////// pravila za igru:
 
