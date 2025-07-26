@@ -25,6 +25,12 @@ document.getElementById("rock").addEventListener("click", function () {
   console.log(Igrac je izabrao: playerChoice);
 });
 
+
+document.getElementById("paper").addEventListener("click", function {
+  playerChoice = "paper";
+  
+})
+
 ////////// pravila za igru:
 
 //belezi se izbor playera
