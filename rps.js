@@ -15,7 +15,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
 
 let playerScore = 0;
 let computerScore = 0;
-
+let playerChoice = "";
 let computerChoice;
 
 const options = ["rock", "paper", "scissors"];
@@ -27,7 +27,7 @@ function getComputerChoice() {
 
 console.log(`Kompjuter je igrao ${computerSign}`);
 
-let playerChoice = "";
+
 
 document.getElementById("rock").addEventListener("click", function () {
   playerChoice = "rock";
@@ -49,3 +49,14 @@ document.getElementById("scissors").addEventListener("click", function () {
   computerSign = getComputerChoice();
   console.log("Kompjuter je izabrao:", computerSign);
 });
+
+
+
+if (playerChoice === computerSign) {
+  console.log("Nereseno!");
+
+} else if (
+  (playerChoice === "rock" && computerSign == "scissors") ||
+  (p)
+
+)
