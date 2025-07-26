@@ -19,9 +19,6 @@ computerSign = getComputerChoice();
 
 console.log(`Kompjuter je igrao ${computerSign}`);
 
-//kako da znam sta kompjuter igra?
-//napravi array choices ["rock","paper", "scissors"]
-
 ////////// pravila za igru:
 
 //belezi se izbor playera
