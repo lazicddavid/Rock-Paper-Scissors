@@ -22,14 +22,19 @@ let playerChoice = "";
 
 document.getElementById("rock").addEventListener("click", function () {
   playerChoice = "rock";
-  console.log(Igrac je izabrao: playerChoice);
+  console.log("Igrac je izabrao:" playerChoice);
 });
 
 
-document.getElementById("paper").addEventListener("click", function {
+document.getElementById("paper").addEventListener("click", function () {
   playerChoice = "paper";
-  
-})
+  console.log("Igrač je izabrao:", playerChoice);
+});
+
+document.getElementById("scissors").addEventListener("click", function () {
+  playerChoice = "scissors";
+  console.log("Igrač je izabrao:", playerChoice);
+});
 
 ////////// pravila za igru:
 
