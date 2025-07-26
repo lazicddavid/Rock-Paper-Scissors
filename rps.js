@@ -20,6 +20,8 @@ console.log(`Kompjuter je igrao ${computerSign}`);
 
 let playerChoice = "";
 
+document.getElementById("rock").addEventListener("click", function())
+
 ////////// pravila za igru:
 
 //belezi se izbor playera
