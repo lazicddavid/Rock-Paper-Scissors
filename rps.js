@@ -53,5 +53,5 @@ if (playerChoice === computerSign) {
 } else if ((playerChoice === "rock" && computerSign === "scissors") || (playerChoice === "paper" &&  computerSign === "rock") || 
 (playerChoice === "scissors" && computerSign === "paper") {
   console.log("Igrac pobedjuje");
-  playerChoice++;
+  playerScore++;
 }
