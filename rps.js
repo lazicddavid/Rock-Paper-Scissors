@@ -54,4 +54,7 @@ if (playerChoice === computerSign) {
 (playerChoice === "scissors" && computerSign === "paper") {
   console.log("Igrac pobedjuje");
   playerScore++;
+} else {
+  console.log("Kompjuter pobedjuje");
+  computerScore++;
 }
