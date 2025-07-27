@@ -27,8 +27,6 @@ function getComputerChoice() {
 
 console.log(`Kompjuter je igrao ${computerSign}`);
 
-
-
 document.getElementById("rock").addEventListener("click", function () {
   playerChoice = "rock";
   console.log("Igrac je izabrao:", playerChoice);
@@ -50,13 +48,6 @@ document.getElementById("scissors").addEventListener("click", function () {
   console.log("Kompjuter je izabrao:", computerSign);
 });
 
-
-
 if (playerChoice === computerSign) {
   console.log("Nereseno!");
-
-} else if (
-  (playerChoice === "rock" && computerSign == "scissors") ||
-  (p)
-
-)
+} else if ((playerChoice === "rock" && computerSign === "scissors") || (playerChoice === "paper" && )
