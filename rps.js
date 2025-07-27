@@ -50,4 +50,4 @@ document.getElementById("scissors").addEventListener("click", function () {
 
 if (playerChoice === computerSign) {
   console.log("Nereseno!");
-} else if ((playerChoice === "rock" && computerSign === "scissors") || (playerChoice === "paper" && )
+} else if ((playerChoice === "rock" && computerSign === "scissors") || (playerChoice === "paper" &&  computerSign
