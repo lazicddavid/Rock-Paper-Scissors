@@ -1,4 +1,4 @@
-////////// pravila za igru:
+/*////////// pravila za igru:
 
 //belezi se izbor playera
 //komp. generise nasumican izbor
@@ -8,6 +8,7 @@
 //ako komp. pobedjuje dodaje se ++ poen njemu
 //menja se rezultat i na ekranu(curent score)
 //ko prvi dodje do 5 poena, pobednik, igra se vraca na pocetak.
+// */
 
 document.getElementById("startBtn").addEventListener("click", function () {
   document.getElementById("gameOverlay").style.display = "none";
@@ -50,7 +51,8 @@ document.getElementById("scissors").addEventListener("click", function () {
 
 if (playerChoice === computerSign) {
   console.log("Nereseno!");
-} else if ((playerChoice === "rock" && computerSign === "scissors") || (playerChoice === "paper" &&  computerSign === "rock") || 
+} else if (playerChoice === "rock" && computerSign === "scissors") || 
+(playerChoice === "paper" &&  computerSign === "rock") || 
 (playerChoice === "scissors" && computerSign === "paper") {
   console.log("Igrac pobedjuje");
   playerScore++;
