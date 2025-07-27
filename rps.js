@@ -51,4 +51,7 @@ document.getElementById("scissors").addEventListener("click", function () {
 if (playerChoice === computerSign) {
   console.log("Nereseno!");
 } else if ((playerChoice === "rock" && computerSign === "scissors") || (playerChoice === "paper" &&  computerSign === "rock") || 
-(playerChoice === "scissors" && computerSign === "paper")
+(playerChoice === "scissors" && computerSign === "paper") {
+  console.log("Igrac pobedjuje");
+  playerChoice++;
+}
