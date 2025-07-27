@@ -19,6 +19,14 @@ let computerScore = 0;
 let playerChoice = "";
 let computerChoice;
 
+
+const playerScoreEl = document.getElementById("playerScore");
+const computerScoreEl = document.getElementById("computerScore");
+
+
+
+
+
 const options = ["rock", "paper", "scissors"];
 
 function getComputerChoice() {
@@ -60,3 +68,5 @@ if (playerChoice === computerSign) {
   console.log("Kompjuter pobedjuje");
   computerScore++;
 }
+
+
