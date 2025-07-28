@@ -50,7 +50,7 @@ function playRound(choice) {
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
-    console.log("Player wins this round!");
+    console.log("Player wins this round");
     playerScore++;
   } else {
     console.log("Computer wins this round!");
@@ -64,7 +64,7 @@ function playRound(choice) {
     alert("Player wins  game!");
     resetGame();
   } else if (computerScore === 5) {
-    alert("Computer wins the game!");
+    alert("Computer wins  game!");
     resetGame();
   }
 }
