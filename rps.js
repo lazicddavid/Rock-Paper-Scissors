@@ -43,6 +43,23 @@ function playRound(choice) {
   console.log("Player chose:", playerChoice);
   console.log("Computer chose:", computerChoice);
 
+  // Set player symbol
+  if (playerChoice === "rock") {
+    playerIcon.textContent = "✊";
+  } else if (playerChoice === "paper") {
+    playerIcon.textContent = "✋";
+  } else if (playerChoice === "scissors") {
+    playerIcon.textContent = "✌️";
+  }
+
+  if (computerChoice === "rock") {
+    computerIcon.textContent = "✊";
+  } else if (computerChoice === "paper") {
+    computerIcon.textContent = "✋";
+  } else if (computerChoice === "scissors") {
+    computerIcon.textContent = "✌️";
+  }
+
   if (playerChoice === computerChoice) {
     console.log("It is draw!");
   } else if (
