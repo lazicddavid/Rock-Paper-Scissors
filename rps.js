@@ -109,3 +109,5 @@ function resetGame() {
   playerIcon.textContent = "?";
   computerIcon.textContent = "?";
 }
+
+document.getElementById("playerIcon").textContent = "✋";
