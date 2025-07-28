@@ -45,12 +45,12 @@
 }
 
 body {
-  margin: 0;
+  margin: 100px;
   padding: 0;
   background-color: #1e293b;
   color: white;
   font-family: "Segoe UI", sans-serif;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 .main-title {

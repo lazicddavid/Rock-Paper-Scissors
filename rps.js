@@ -29,21 +29,13 @@ function getComputerChoice() {
   return options[randomIndex];
 }
 
-function resetGame() {
-  playerScore = 0;
-  computerScore = 0;
-  playerScoreEl.textContent = playerScore;
-  computerScoreEl.textContent = computerScore;
-}
-
 function playRound(choice) {
   playerChoice = choice;
   computerChoice = getComputerChoice();
 
-  console.log("Player chose:", playerChoice);
-  console.log("Computer chose:", computerChoice);
+  console.log("Player:", playerChoice);
+  console.log("Computer:", computerChoice);
 
-  // Set player symbol
   if (playerChoice === "rock") {
     playerIcon.textContent = "✊";
   } else if (playerChoice === "paper") {
@@ -61,7 +53,7 @@ function playRound(choice) {
   }
 
   if (playerChoice === computerChoice) {
-    console.log("It is draw!");
+    console.log("It is draw");
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
@@ -70,7 +62,7 @@ function playRound(choice) {
     console.log("Player wins this round");
     playerScore++;
   } else {
-    console.log("Computer wins this round!");
+    console.log("Computer wins this round");
     computerScore++;
   }
 
@@ -109,5 +101,3 @@ function resetGame() {
   playerIcon.textContent = "?";
   computerIcon.textContent = "?";
 }
-
-document.getElementById("playerIcon").textContent = "✋";
