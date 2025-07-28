@@ -17,15 +17,10 @@ document.getElementById("startBtn").addEventListener("click", function () {
 let playerScore = 0;
 let computerScore = 0;
 let playerChoice = "";
-let computerChoice;
-
+let computerChoice = "";
 
 const playerScoreEl = document.getElementById("playerScore");
 const computerScoreEl = document.getElementById("computerScore");
-
-
-
-
 
 const options = ["rock", "paper", "scissors"];
 
@@ -34,39 +29,57 @@ function getComputerChoice() {
   return options[randomIndex];
 }
 
-console.log(`Kompjuter je igrao ${computerSign}`);
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreEl.textContent = playerScore;
+  computerScoreEl.textContent = computerScore;
+}
+
+function playRound(choice) {
+  playerChoice = choice;
+  computerChoice = getComputerChoice();
+
+  console.log("Player chose:", playerChoice);
+  console.log("Computer chose:", computerChoice);
+
+  if (playerChoice === computerChoice) {
+    console.log("It is draw!");
+  } else if (
+    (playerChoice === "rock" && computerChoice === "scissors") ||
+    (playerChoice === "paper" && computerChoice === "rock") ||
+    (playerChoice === "scissors" && computerChoice === "paper")
+  ) {
+    console.log("Player wins this round!");
+    playerScore++;
+  } else {
+    console.log("Computer wins this round!");
+    computerScore++;
+  }
+
+  playerScoreEl.textContent = playerScore;
+  computerScoreEl.textContent = computerScore;
+
+  if (playerScore === 5) {
+    alert("Player wins  game!");
+    resetGame();
+  } else if (computerScore === 5) {
+    alert("Computer wins the game!");
+    resetGame();
+  }
+}
+
+const playerIcon = document.querySelector("#playerIcon");
+const computerIcon = document.querySelector("#computerIcon");
 
 document.getElementById("rock").addEventListener("click", function () {
-  playerChoice = "rock";
-  console.log("Igrac je izabrao:", playerChoice);
-  computerSign = getComputerChoice();
-  console.log("Kompjuter je izabrao:", computerSign);
+  playRound("rock");
 });
 
 document.getElementById("paper").addEventListener("click", function () {
-  playerChoice = "paper";
-  console.log("Igrač je izabrao:", playerChoice);
-  computerSign = getComputerChoice();
-  console.log("Kompjuter je izabrao:", computerSign);
+  playRound("paper");
 });
 
 document.getElementById("scissors").addEventListener("click", function () {
-  playerChoice = "scissors";
-  console.log("Igrač je izabrao:", playerChoice);
-  computerSign = getComputerChoice();
-  console.log("Kompjuter je izabrao:", computerSign);
+  playRound("scissors");
 });
-
-if (playerChoice === computerSign) {
-  console.log("Nereseno!");
-} else if (playerChoice === "rock" && computerSign === "scissors") || 
-(playerChoice === "paper" &&  computerSign === "rock") || 
-(playerChoice === "scissors" && computerSign === "paper") {
-  console.log("Igrac pobedjuje");
-  playerScore++;
-} else {
-  console.log("Kompjuter pobedjuje");
-  computerScore++;
-}
-
-
