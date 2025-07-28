@@ -100,3 +100,12 @@ document.getElementById("paper").addEventListener("click", function () {
 document.getElementById("scissors").addEventListener("click", function () {
   playRound("scissors");
 });
+
+function resetGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreEl.textContent = playerScore;
+  computerScoreEl.textContent = computerScore;
+  playerIcon.textContent = "?";
+  computerIcon.textContent = "?";
+}
