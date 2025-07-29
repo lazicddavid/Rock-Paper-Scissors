@@ -133,4 +133,6 @@ h2 {
   transform: scale(1.1);
 }
 
-.weapon: hover;
+.weapon {
+  background-color: ;
+}
