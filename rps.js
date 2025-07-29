@@ -29,28 +29,20 @@ function getComputerChoice() {
   return options[randomIndex];
 }
 
+const choicesIcons = {
+  rock: "✊",
+  paper: "✋",
+  scissors: "✌️",
+};
+
 function playRound(choice) {
   playerChoice = choice;
   computerChoice = getComputerChoice();
 
   console.log("Player:", playerChoice);
   console.log("Computer:", computerChoice);
-
-  if (playerChoice === "rock") {
-    playerIcon.textContent = "✊";
-  } else if (playerChoice === "paper") {
-    playerIcon.textContent = "✋";
-  } else if (playerChoice === "scissors") {
-    playerIcon.textContent = "✌️";
-  }
-
-  if (computerChoice === "rock") {
-    computerIcon.textContent = "✊";
-  } else if (computerChoice === "paper") {
-    computerIcon.textContent = "✋";
-  } else if (computerChoice === "scissors") {
-    computerIcon.textContent = "✌️";
-  }
+  playerIcon.textContent = choicesIcons[choice];
+  computerIcon.textContent = choicesIcons[computerChoice];
 
   if (playerChoice === computerChoice) {
     console.log("It is draw");
