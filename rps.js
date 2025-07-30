@@ -19,6 +19,9 @@ let computerScore = 0;
 let playerChoice = "";
 let computerChoice = "";
 
+const roundResult = document.getElementById("roundResult");
+const roundExplanation = document.getElementById("roundExplanation");
+
 const playerScoreEl = document.getElementById("playerScore");
 const computerScoreEl = document.getElementById("computerScore");
 
