@@ -1,5 +1,10 @@
 let playerScore = 0;
 let computerScore = 0;
+const maxScore = 5;
+
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorsBtn = document.getElementById("scissors");
 
 const playerIcon = document.getElementById("playerIcon");
 const computerIcon = document.getElementById("computerIcon");
@@ -8,19 +13,19 @@ const computerScoreDisplay = document.getElementById("computerScore");
 const roundResult = document.getElementById("roundResult");
 const roundExplanation = document.getElementById("roundExplanation");
 
+rockBtn.addEventListener("click", function () {
+  playRound("rock");
+});
+paperBtn.addEventListener("click", function () {
+  playRound("paper");
+});
+scissorsBtn.addEventListener("click", function () {
+  playRound("scissors");
+});
+
 const overlay = document.getElementById("gameOverlay");
 const overlayTitle = document.querySelector("#gameOverlay h1");
 const startBtn = document.getElementById("startBtn");
-
-document.getElementById("rock").addEventListener("click", function () {
-  playRound("rock");
-});
-document.getElementById("paper").addEventListener("click", function () {
-  playRound("paper");
-});
-document.getElementById("scissors").addEventListener("click", function () {
-  playRound("scissors");
-});
 
 startBtn.addEventListener("click", function () {
   overlay.style.display = "none";
@@ -54,7 +59,7 @@ function playRound(playerChoice) {
     computerScoreDisplay.textContent = computerScore;
   }
 
-  if (playerScore === 5 || computerScore === 5) {
+  if (playerScore === maxScore || computerScore === maxScore) {
     overlayTitle.textContent =
       playerScore === 5 ? "Player Won!" : "Computer Won!";
     startBtn.textContent = "START NEW GAME";
