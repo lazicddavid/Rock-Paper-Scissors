@@ -1,100 +1,85 @@
-/*////////// pravila za igru:
-
-//belezi se izbor playera
-//komp. generise nasumican izbor
-//uporedimo oba izbora
-//ako su isti, rez = neresen
-//ako igrac pobedjuje, dodaje ++ se jedan poen
-//ako komp. pobedjuje dodaje se ++ poen njemu
-//menja se rezultat i na ekranu(curent score)
-//ko prvi dodje do 5 poena, pobednik, igra se vraca na pocetak.
-// */
-document.getElementById("startBtn").addEventListener("click", function () {
-  document.getElementById("gameOverlay").style.display = "none";
-});
-
-const maxScore = 5;
 let playerScore = 0;
 let computerScore = 0;
-let playerChoice = "";
-let computerChoice = "";
 
-const playerIcon = document.querySelector("#playerIcon");
-const computerIcon = document.querySelector("#computerIcon");
+const playerIcon = document.getElementById("playerIcon");
+const computerIcon = document.getElementById("computerIcon");
+const playerScoreDisplay = document.getElementById("playerScore");
+const computerScoreDisplay = document.getElementById("computerScore");
 const roundResult = document.getElementById("roundResult");
 const roundExplanation = document.getElementById("roundExplanation");
-const playerScoreEl = document.getElementById("playerScore");
-const computerScoreEl = document.getElementById("computerScore");
-const options = ["rock", "paper", "scissors"];
 
-function getComputerChoice() {
-  const randomIndex = Math.floor(Math.random() * options.length);
-  return options[randomIndex];
-}
+const overlay = document.getElementById("gameOverlay");
+const overlayTitle = document.querySelector("#gameOverlay h1");
+const startBtn = document.getElementById("startBtn");
 
-const choicesIcons = {
-  rock: "✊",
-  paper: "✋",
-  scissors: "✌️",
-};
+document.getElementById("rock").addEventListener("click", function () {
+  playRound("rock");
+});
+document.getElementById("paper").addEventListener("click", function () {
+  playRound("paper");
+});
+document.getElementById("scissors").addEventListener("click", function () {
+  playRound("scissors");
+});
 
-function playRound(choice) {
-  playerChoice = choice;
-  computerChoice = getComputerChoice();
+startBtn.addEventListener("click", function () {
+  overlay.style.display = "none";
+  resetGame();
+});
 
-  console.log("Player:", playerChoice);
-  console.log("Computer:", computerChoice);
-  playerIcon.textContent = choicesIcons[choice];
-  computerIcon.textContent = choicesIcons[computerChoice];
+function playRound(playerChoice) {
+  const computerChoice = getComputerChoice();
+
+  playerIcon.textContent = getIcon(playerChoice);
+  computerIcon.textContent = getIcon(computerChoice);
 
   if (playerChoice === computerChoice) {
     roundResult.textContent = "It's a draw!";
-    roundExplanation.textContent = `${choicesIcons[playerChoice]} equals ${choicesIcons[computerChoice]}`;
+    roundExplanation.textContent = "";
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
-    roundResult.textContent = "You win this round!";
-    roundExplanation.textContent = `${choicesIcons[playerChoice]} beats ${choicesIcons[computerChoice]}`;
+    roundResult.textContent = "You win!";
+    roundExplanation.textContent = `${playerChoice} beats ${computerChoice}`;
+
     playerScore++;
+    playerScoreDisplay.textContent = playerScore;
   } else {
-    roundResult.textContent = "Computer wins this round!";
-    roundExplanation.textContent = `${choicesIcons[computerChoice]} beats ${choicesIcons[playerChoice]}`;
+    roundResult.textContent = "Computer wins!";
+    roundExplanation.textContent = `${computerChoice} beats ${playerChoice}`;
+
     computerScore++;
+    computerScoreDisplay.textContent = computerScore;
   }
 
-  playerScoreEl.textContent = playerScore;
-  computerScoreEl.textContent = computerScore;
-
-  if (playerScore === maxScore) {
-    alert("You reached the max score!");
-    resetGame();
-  } else if (computerScore === maxScore) {
-    alert("Computer reached the max score!");
-    resetGame();
+  if (playerScore === 5 || computerScore === 5) {
+    overlayTitle.textContent =
+      playerScore === 5 ? "Player Won!" : "Computer Won!";
+    startBtn.textContent = "START NEW GAME";
+    overlay.style.display = "flex";
   }
 }
 
-document.getElementById("rock").addEventListener("click", function () {
-  playRound("rock");
-});
+function getComputerChoice() {
+  const choices = ["rock", "paper", "scissors"];
+  return choices[Math.floor(Math.random() * choices.length)];
+}
 
-document.getElementById("paper").addEventListener("click", function () {
-  playRound("paper");
-});
-
-document.getElementById("scissors").addEventListener("click", function () {
-  playRound("scissors");
-});
+function getIcon(choice) {
+  if (choice === "rock") return "✊";
+  if (choice === "paper") return "✋";
+  if (choice === "scissors") return "✌";
+}
 
 function resetGame() {
   playerScore = 0;
   computerScore = 0;
-  playerScoreEl.textContent = playerScore;
-  computerScoreEl.textContent = computerScore;
+  playerScoreDisplay.textContent = "0";
+  computerScoreDisplay.textContent = "0";
   playerIcon.textContent = "?";
   computerIcon.textContent = "?";
-  roundResult.textContent = "";
+  roundResult.textContent = "Let's play!";
   roundExplanation.textContent = "";
 }
