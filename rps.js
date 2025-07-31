@@ -5,13 +5,19 @@ const maxScore = 5;
 const rockBtn = document.getElementById("rock");
 const paperBtn = document.getElementById("paper");
 const scissorsBtn = document.getElementById("scissors");
-
 const playerIcon = document.getElementById("playerIcon");
 const computerIcon = document.getElementById("computerIcon");
 const playerScoreDisplay = document.getElementById("playerScore");
 const computerScoreDisplay = document.getElementById("computerScore");
 const roundResult = document.getElementById("roundResult");
 const roundExplanation = document.getElementById("roundExplanation");
+const overlay = document.getElementById("gameOverlay");
+const overlayTitle = document.querySelector("#gameOverlay h1");
+const startBtn = document.getElementById("startBtn");
+
+//pogledaj querySelectorAll
+//pogledaj forEach
+//zakaci na svaki button ID  i umesto kodiranog stringa, prosledi taj ID u playRound
 
 rockBtn.addEventListener("click", function () {
   playRound("rock");
@@ -22,10 +28,6 @@ paperBtn.addEventListener("click", function () {
 scissorsBtn.addEventListener("click", function () {
   playRound("scissors");
 });
-
-const overlay = document.getElementById("gameOverlay");
-const overlayTitle = document.querySelector("#gameOverlay h1");
-const startBtn = document.getElementById("startBtn");
 
 startBtn.addEventListener("click", function () {
   overlay.style.display = "none";
@@ -39,14 +41,14 @@ function playRound(playerChoice) {
   computerIcon.textContent = getIcon(computerChoice);
 
   if (playerChoice === computerChoice) {
-    roundResult.textContent = "It's a draw!";
+    roundResult.textContent = "It's a draw";
     roundExplanation.textContent = "";
   } else if (
     (playerChoice === "rock" && computerChoice === "scissors") ||
     (playerChoice === "paper" && computerChoice === "rock") ||
     (playerChoice === "scissors" && computerChoice === "paper")
   ) {
-    roundResult.textContent = "You win!";
+    roundResult.textContent = "You win";
     roundExplanation.textContent = `${playerChoice} beats ${computerChoice}`;
 
     playerScore++;
@@ -61,7 +63,7 @@ function playRound(playerChoice) {
 
   if (playerScore === maxScore || computerScore === maxScore) {
     overlayTitle.textContent =
-      playerScore === 5 ? "Player Won!" : "Computer Won!";
+      playerScore === maxScore ? "Player Won!" : "Computer Won!";
     startBtn.textContent = "START NEW GAME";
     overlay.style.display = "flex";
   }
