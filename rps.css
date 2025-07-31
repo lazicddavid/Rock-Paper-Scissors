@@ -145,9 +145,8 @@ h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-border: ;
-
-.weapon:hover {
+}
+:hover.weapon:hover {
   background-color: #475569;
   transform: scale(1.1);
 }
