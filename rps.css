@@ -145,9 +145,7 @@ h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding: ;
-  display: flex;
-}
+border: ;
 
 .weapon:hover {
   background-color: #475569;
