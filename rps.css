@@ -145,6 +145,7 @@ h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  max-resolution: ;
   display: flex;
 }
 
