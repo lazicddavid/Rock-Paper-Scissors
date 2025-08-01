@@ -145,7 +145,6 @@ h2 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  width: ;
 }
 .weapon:hover {
   background-color: #475569;
@@ -199,4 +198,7 @@ h2 {
 
 .overlay-content button:hover {
   background-color: #505767;
+}
+
+body {
 }
