@@ -200,9 +200,6 @@ h2 {
   background-color: #505767;
 }
 
-.container {
-  margin: ;
-  padding: ;
-  bottom: none;
-  align-items: `;
-}
+//pogledaj querySelectorAll
+//pogledaj forEach
+//zakaci na svaki button ID  i umesto kodiranog stringa, prosledi taj ID u playRound

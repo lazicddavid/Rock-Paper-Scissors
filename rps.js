@@ -15,23 +15,12 @@ const overlay = document.getElementById("gameOverlay");
 const overlayTitle = document.querySelector("#gameOverlay h1");
 const startBtn = document.getElementById("startBtn");
 
-//pogledaj querySelectorAll
-//pogledaj forEach
-//zakaci na svaki button ID  i umesto kodiranog stringa, prosledi taj ID u playRound
+const choiceButtons = document.querySelectorAll("#rock, #paper, #scissors");
 
-rockBtn.addEventListener("click", function () {
-  playRound("rock");
-});
-paperBtn.addEventListener("click", function () {
-  playRound("paper");
-});
-scissorsBtn.addEventListener("click", function () {
-  playRound("scissors");
-});
-
-startBtn.addEventListener("click", function () {
-  overlay.style.display = "none";
-  resetGame();
+choiceButtons.forEach((btn) => {
+  btn.addEventListener("click", (e) => {
+    playRound(e.target.id);
+  });
 });
 
 function playRound(playerChoice) {
