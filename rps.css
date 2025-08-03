@@ -55,6 +55,7 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   background-color: #1e293b;
@@ -102,8 +103,14 @@ h2 {
 .scoreboard {
   display: flex;
   justify-content: center;
-
+  gap: 100px;
   margin-bottom: 40px;
+}
+
+.result-message {
+  text-align: center;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .choice {
@@ -120,7 +127,7 @@ h2 {
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 50px;
+  gap: 30px;
 }
 
 .player {
@@ -139,6 +146,7 @@ h2 {
 }
 
 .container {
+  overflow-x: hidden;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
