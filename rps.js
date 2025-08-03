@@ -80,4 +80,6 @@ function resetGame() {
   roundExplanation.textContent = "";
 }
 
-startBtn.addEventListener("click", function())
+startBtn.addEventListener("click", function () {
+  overlay.style.display = "none";
+});
