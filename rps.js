@@ -79,3 +79,5 @@ function resetGame() {
   roundResult.textContent = "Let's play!";
   roundExplanation.textContent = "";
 }
+
+startBtn.addEventListener("click", function())
