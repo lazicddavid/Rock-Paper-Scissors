@@ -85,5 +85,4 @@ startBtn.addEventListener("click", function () {
   resetGame();
 });
 
-
-.addEventListener
+resetGame;
