@@ -6,10 +6,6 @@ let playerScore = 0;
 let computerScore = 0;
 const maxScore = 5;
 
-let computerScore 
-const maxScore
-let playerScore = 0;
-
 const playerIcon = document.getElementById("playerIcon");
 const computerIcon = document.getElementById("computerIcon");
 const playerScoreDisplay = document.getElementById("playerScore");
@@ -19,7 +15,6 @@ const roundExplanation = document.getElementById("roundExplanation");
 const overlay = document.getElementById("gameOverlay");
 const overlayTitle = document.querySelector("#gameOverlay h1");
 const startBtn = document.getElementById("startBtn");
-
 const choiceButtons = document.querySelectorAll("#rock, #paper, #scissors");
 
 choiceButtons.forEach((btn) => {
