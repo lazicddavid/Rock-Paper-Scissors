@@ -199,7 +199,3 @@ h2 {
 .overlay-content button:hover {
   background-color: #505767;
 }
-
-//pogledaj querySelectorAll
-//pogledaj forEach
-//zakaci na svaki button ID  i umesto kodiranog stringa, prosledi taj ID u playRound

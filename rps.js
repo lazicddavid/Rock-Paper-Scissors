@@ -1,10 +1,15 @@
+//pogledaj querySelectorAll
+//pogledaj forEach
+//zakaci na svaki button ID  i umesto kodiranog stringa, prosledi taj ID u playRound
+
 let playerScore = 0;
 let computerScore = 0;
 const maxScore = 5;
 
-const rockBtn = document.getElementById("rock");
-const paperBtn = document.getElementById("paper");
-const scissorsBtn = document.getElementById("scissors");
+let computerScore 
+const maxScore
+let playerScore = 0;
+
 const playerIcon = document.getElementById("playerIcon");
 const computerIcon = document.getElementById("computerIcon");
 const playerScoreDisplay = document.getElementById("playerScore");
