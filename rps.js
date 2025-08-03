@@ -82,4 +82,5 @@ function resetGame() {
 
 startBtn.addEventListener("click", function () {
   overlay.style.display = "none";
+  resetGame();
 });
